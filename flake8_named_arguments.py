@@ -1,6 +1,9 @@
 import ast
 import sys
-from typing import Generator, Tuple, Type, Any
+from typing import Any
+from typing import Generator
+from typing import Tuple
+from typing import Type
 
 if sys.version_info < (3, 8):
     import importlib_metadata
