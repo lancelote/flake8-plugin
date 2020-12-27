@@ -1,2 +1,5 @@
 # PyCharm
 .idea/
+
+# Editable Install
+flake8_named_arguments.egg-info
