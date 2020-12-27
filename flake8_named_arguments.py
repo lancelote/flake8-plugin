@@ -10,9 +10,9 @@ if sys.version_info < (3, 8):
 else:
     import importlib.metadata as importlib_metadata
 
-ErrLineNum = int
-CharOffset = int
-Message = str
+Line = int
+Col = int
+Msg = str
 
 
 class Plugin:
@@ -22,5 +22,5 @@ class Plugin:
     def __init__(self, tree: ast.AST) -> None:
         self._tree = tree
 
-    def run(self) -> Generator[Tuple[ErrLineNum, CharOffset, Message, Type[Any]], None, None]:
+    def run(self) -> Generator[Tuple[Line, Col, Msg, Type[Any]], None, None]:
         yield 1, 0, 'FNA100 named argument', type(self)
